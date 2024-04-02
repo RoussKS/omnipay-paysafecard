@@ -14,7 +14,7 @@ class FetchTransactionTest extends TestCase
      */
     private $request;
 
-    public function setUp()
+    protected function setUp(): void
     {
         $this->request = new FetchTransactionRequest($this->getHttpClient(), $this->getHttpRequest());
         $this->request->setPaymentId(self::PAYMENT_ID);

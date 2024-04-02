@@ -21,12 +21,14 @@
         }
     },
     "require": {
-        "php": "^7.1.0",
+        "php": "^7.1.0 || ^8.0.0",
         "omnipay/common": "^3.0.1",
-        "ext-json": "*"
+        "ext-json": "*",
+        "symfony/http-client": "^7.0"
     },
     "require-dev": {
-        "omnipay/tests": "^3.1"
+        "omnipay/tests": "^3.1 || ^4.0",
+        "http-interop/http-factory-guzzle": "^1.2"
     },
     "scripts": {
         "test": "phpunit"
@@ -42,5 +44,10 @@
             "name": "Rory Scholman",
             "email": "rory.scholman@worldstream.nl"
         }
-    ]
+    ],
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
 }
